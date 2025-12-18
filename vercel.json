@@ -9,7 +9,7 @@
             }
         },
         {
-            "src": "backend/wsgi.py",
+            "src": "ReactFitPythonBackend/wsgi.py",
             "use": "@vercel/python",
             "config": { "maxLambdaSize": "1024mb", "runtime": "python3.12" }
         }
@@ -21,7 +21,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "backend/wsgi.py"
+            "dest": "ReactFitPythonBackend/wsgi.py"
         }
     ]
 }
