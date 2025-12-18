@@ -13,9 +13,11 @@ from django.utils import timezone
 from .serializers import RegisterSerializer
 from .models.waterIntake import WaterIntake
 from .models.dietLogs import DietLog
+from dotenv import load_dotenv
+load_dotenv()
 
 # --- CONFIGURATION ---
-client = Groq(api_key="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")
+client = Groq(api_key=os.getenv("GROK_APIKEY"))
 
 # --- 1. HELPER: EXTRACT CONTEXT FROM MESSAGE ---
 def extract_user_context(messages):
