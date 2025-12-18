@@ -1,10 +1,10 @@
 echo "Deployment started"
 
-# REMOVE the venv lines (python3.12 -m venv env / source env...) if you haven't already!
+# 1. Install EVERYTHING from your requirements file
+# This ensures google-genai, dotenv, requests, etc. are all present.
+python3.12 -m pip install -r requirements.txt
 
-# Update this line to include djangorestframework
-python3.12 -m pip install Django==5.1.6 djangorestframework psycopg2-binary==2.9.11 groq==0.37.1
-
+# 2. Collect Static Files
 python3.12 manage.py collectstatic --noinput
 
 echo "Deployment completed"
